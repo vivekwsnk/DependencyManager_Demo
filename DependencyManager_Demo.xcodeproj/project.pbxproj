@@ -13,6 +13,9 @@
 		B375B4FD2D6E0FE700318C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B375B4FB2D6E0FE700318C92 /* Main.storyboard */; };
 		B375B4FF2D6E0FE900318C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B375B4FE2D6E0FE900318C92 /* Assets.xcassets */; };
 		B375B5022D6E0FE900318C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B375B5002D6E0FE900318C92 /* LaunchScreen.storyboard */; };
+		B375B50B2D6E112B00318C92 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B375B50A2D6E112B00318C92 /* Alamofire */; };
+		B375B50D2D6E112B00318C92 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B375B50C2D6E112B00318C92 /* AlamofireDynamic */; };
+		B375B5102D6E113600318C92 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B375B50F2D6E113600318C92 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B375B50B2D6E112B00318C92 /* Alamofire in Frameworks */,
+				B375B5102D6E113600318C92 /* FSCalendar in Frameworks */,
+				B375B50D2D6E112B00318C92 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = DependencyManager_Demo;
+			packageProductDependencies = (
+				B375B50A2D6E112B00318C92 /* Alamofire */,
+				B375B50C2D6E112B00318C92 /* AlamofireDynamic */,
+				B375B50F2D6E113600318C92 /* FSCalendar */,
+			);
 			productName = DependencyManager_Demo;
 			productReference = B375B4F22D6E0FE700318C92 /* DependencyManager_Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = B375B4E92D6E0FE700318C92;
+			packageReferences = (
+				B375B5092D6E112B00318C92 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B375B50E2D6E113500318C92 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = B375B4F32D6E0FE700318C92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +376,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B375B5092D6E112B00318C92 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		B375B50E2D6E113500318C92 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B375B50A2D6E112B00318C92 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B375B5092D6E112B00318C92 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B375B50C2D6E112B00318C92 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B375B5092D6E112B00318C92 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		B375B50F2D6E113600318C92 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B375B50E2D6E113500318C92 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B375B4EA2D6E0FE700318C92 /* Project object */;
 }
